@@ -5,3 +5,42 @@ format: html
 editor: visual
 ---
 
+```{r}
+
+library(tidyverse)
+library(skimr)
+library(GGally)
+
+```
+
+```{r}
+
+view(diamonds)
+names(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+
+```
+
+```{r}
+
+GGally::ggpairs(diamonds)
+
+```
+
+```{r}
+
+ggplot(data = diamonds, aes(x = price, y = carat)) + 
+  geom_point()
+
+```
+
+```{r}
+
+ggplot(data = diamonds, aes(x = carat)) + 
+  geom_histogram()
+
+```
+
